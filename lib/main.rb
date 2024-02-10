@@ -80,6 +80,19 @@ class LinkedList
     false
   end
 
+  def find(value)
+    current = @head
+    counter = 0
+
+    until last_node?(current)
+      return counter if current.value == value
+      current = current.next_node
+      counter += 1
+    end
+
+    nil
+  end
+
   private
 
   def start_list(item)
