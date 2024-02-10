@@ -80,6 +80,8 @@ class LinkedList
   end
 
   def contains?(value)
+    return false if empty_list?
+
     current = @head
 
     until last_node?(current)
