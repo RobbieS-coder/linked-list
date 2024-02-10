@@ -66,6 +66,8 @@ class LinkedList
   end
 
   def pop
+    return nil if empty_list?
+
     current = @head
     previous = nil
 
