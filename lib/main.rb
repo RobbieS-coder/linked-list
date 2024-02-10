@@ -26,6 +26,8 @@ class LinkedList
   end
 
   def size
+    return 0 if empty_list?
+
     current = @head
     counter = 1
 
