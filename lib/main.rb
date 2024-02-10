@@ -45,6 +45,18 @@ class LinkedList
     node
   end
 
+  def at(index)
+    current = @head
+    counter = 0
+
+    until counter == index
+      counter += 1
+      current = current.next_node
+    end
+
+    current.value
+  end
+
   private
 
   def start_list(item)
@@ -59,12 +71,3 @@ class LinkedList
     node.next_node.nil?
   end
 end
-
-list = LinkedList.new
-
-list.append('a')
-list.append(nil)
-list.append(42)
-
-p list.head
-p list.tail
