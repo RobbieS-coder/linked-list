@@ -93,6 +93,8 @@ class LinkedList
   end
 
   def find(value)
+    return nil if empty_list?
+
     current = @head
     counter = 0
 
@@ -131,3 +133,9 @@ class LinkedList
     node.next_node.nil?
   end
 end
+
+list = LinkedList.new
+
+p list.find(9)
+
+# p list
