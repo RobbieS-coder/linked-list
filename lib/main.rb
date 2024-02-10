@@ -133,9 +133,3 @@ class LinkedList
     node.next_node.nil?
   end
 end
-
-list = LinkedList.new
-
-p list.find(9)
-
-# p list
