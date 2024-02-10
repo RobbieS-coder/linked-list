@@ -40,6 +40,8 @@ class LinkedList
   end
 
   def tail
+    return nil if empty_list?
+
     node = @head
 
     node = node.next_node until last_node?(node)
