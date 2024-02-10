@@ -21,6 +21,12 @@ class LinkedList
     tail.next_node = Node.new(item)
   end
 
+  def prepend(item)
+    @head = Node.new(item, @head)
+  end
+
+  private
+
   def tail(node = @head)
     return node if node.next_node.nil?
 
