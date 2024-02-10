@@ -9,8 +9,6 @@ class Node
 end
 
 class LinkedList
-  attr_accessor :head
-
   def initialize
     @head = nil
   end
@@ -52,7 +50,7 @@ class LinkedList
   end
 
   def empty_list?
-    head.nil?
+    @head.nil?
   end
 
   def last_node?(node)
