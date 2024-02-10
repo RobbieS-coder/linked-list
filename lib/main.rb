@@ -50,10 +50,14 @@ class LinkedList
   end
 
   def at(index)
+    return nil if empty_list?
+
     current = @head
     counter = 0
 
     until counter == index
+      return nil if last_node?(current)
+
       counter += 1
       current = current.next_node
     end
