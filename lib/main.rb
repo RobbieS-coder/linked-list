@@ -9,6 +9,8 @@ class Node
 end
 
 class LinkedList
+  attr_reader :head
+
   def initialize
     @head = nil
   end
@@ -35,8 +37,6 @@ class LinkedList
     counter
   end
 
-  private
-
   def tail
     node = @head
 
@@ -44,6 +44,8 @@ class LinkedList
 
     node
   end
+
+  private
 
   def start_list(item)
     @head = Node.new(item)
@@ -57,3 +59,12 @@ class LinkedList
     node.next_node.nil?
   end
 end
+
+list = LinkedList.new
+
+list.append('a')
+list.append(nil)
+list.append(42)
+
+p list.head
+p list.tail
