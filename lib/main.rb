@@ -93,6 +93,18 @@ class LinkedList
     nil
   end
 
+  def to_s
+    values = []
+    current = @head
+
+    while current
+      values.push("( #{current.value} )")
+      current = current.next_node
+    end
+
+    values.join(' -> ') + ' -> nil'
+  end
+
   private
 
   def start_list(item)
